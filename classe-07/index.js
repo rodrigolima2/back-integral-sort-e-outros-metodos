@@ -1,4 +1,4 @@
-const usuários = [
+const usuarios = [
     {
         nome: "André",
         idade: 29,
@@ -30,3 +30,14 @@ const usuários = [
         habilitado: true,
     },
 ]
+
+const usuariosCom18a65anos = usuarios.filter(x => x.idade >= 18 && x.idade <= 65);
+console.log(usuariosCom18a65anos);
+
+const todosHabilitados = usuariosCom18a65anos.every(x => x.habilitado);
+
+if (todosHabilitados) {
+    console.log("Todos passaram no teste");
+} else {
+    console.log("Todos precisam estar habilitados");
+}
